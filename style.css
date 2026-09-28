@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f7f7fb;
+}
+
+/* Header */
+header {
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+  background-color: #4b3f9e;
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+}
+
+nav {
+  margin-top: 20px;
+}
+
+nav a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 40px 0;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #4b3f9e;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 8px;
+}
+
+/* Feature cards */
+.card-list {
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  flex: 1;
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card p {
+  margin-bottom: 0;
+  color: #666;
+}
+
+/* Button */
+.btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.btn,
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  background-color: #4b3f9e;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover,
+button:hover {
+  background-color: #352b7a;
+}
+
+/* Subscribe form */
+form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  text-align: center;
+  color: #999;
+}
