@@ -135,6 +135,24 @@ input {
   border-radius: 6px;
 }
 
+button:disabled {
+  background-color: #aaa;
+  cursor: default;
+}
+
+.message {
+  margin-top: 12px;
+  font-size: 15px;
+}
+
+.message.error {
+  color: #d93025;
+}
+
+.message.success {
+  color: #1a8f4c;
+}
+
 /* Footer */
 footer {
   padding: 20px;
