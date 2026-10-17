@@ -121,14 +121,54 @@ button:hover {
   background-color: #352b7a;
 }
 
-/* Subscribe form */
+/* Tabs */
+.tab-menu {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.tab-btn {
+  padding: 8px 16px;
+  color: #4b3f9e;
+  background-color: #fff;
+  border: 1px solid #4b3f9e;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.tab-btn:hover {
+  background-color: #eeeaff;
+}
+
+.tab-btn.active {
+  color: #fff;
+  background-color: #4b3f9e;
+}
+
+.tab-panel {
+  display: none;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.tab-panel.active {
+  display: block;
+}
+
+.tab-panel h3 {
+  margin-top: 0;
+}
+
+/* Join form */
 form {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-input {
+input,
+select {
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -151,6 +191,10 @@ button:disabled {
 
 .message.success {
   color: #1a8f4c;
+}
+
+.message.info {
+  color: #4b3f9e;
 }
 
 /* Footer */
