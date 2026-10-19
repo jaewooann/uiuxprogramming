@@ -93,24 +93,102 @@
 
       <section id="join">
         <h2>참가 신청</h2>
-        <form id="join-form">
-          <label for="name">이름</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="이름을 입력해주세요."
-          />
-          <label for="day">참가 요일</label>
-          <select id="day" name="day">
-            <option value="">요일 선택</option>
-            <option value="화요일 저녁">화요일 저녁</option>
-            <option value="목요일 저녁">목요일 저녁</option>
-            <option value="토요일 아침">토요일 아침</option>
-          </select>
-          <button type="submit" id="join-btn" disabled>신청하기</button>
+        <ol class="step-list">
+          <li class="current">시작</li>
+          <li>이름 입력</li>
+          <li>요일 선택</li>
+          <li>확인</li>
+          <li>완료</li>
+        </ol>
+
+        <form id="join-form" novalidate>
+          <div class="step active">
+            <h3>동네런과 함께 달려요</h3>
+            <p>
+              이름을 입력하고 참가 요일과 페이스 그룹을 고르면 신청이 끝나요.
+              처음 오시는 분도 편하게 신청해주세요.
+            </p>
+            <div class="step-buttons">
+              <button type="button" id="start-btn">신청 시작하기</button>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>이름을 알려주세요</h3>
+            <div class="field">
+              <label for="name">이름</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="이름을 입력해주세요."
+              />
+            </div>
+            <p id="name-message" class="message"></p>
+            <div class="step-buttons">
+              <button type="button" class="btn-sub" id="name-prev-btn">
+                이전
+              </button>
+              <button type="button" id="name-next-btn">다음</button>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>참가 요일과 페이스를 골라주세요</h3>
+            <div class="field">
+              <label for="day">참가 요일</label>
+              <select id="day" name="day">
+                <option value="">요일 선택</option>
+                <option value="화요일 저녁">화요일 저녁</option>
+                <option value="목요일 저녁">목요일 저녁</option>
+                <option value="토요일 아침">토요일 아침</option>
+              </select>
+            </div>
+            <div class="field">
+              <p class="field-title">페이스 그룹</p>
+              <label class="radio">
+                <input type="radio" name="pace" value="초보 그룹" />
+                초보 그룹 (걷기와 달리기를 섞어서)
+              </label>
+              <label class="radio">
+                <input type="radio" name="pace" value="중급 그룹" />
+                중급 그룹 (쉬지 않고 5km)
+              </label>
+            </div>
+            <p id="choice-message" class="message"></p>
+            <div class="step-buttons">
+              <button type="button" class="btn-sub" id="choice-prev-btn">
+                이전
+              </button>
+              <button type="button" id="choice-next-btn">다음</button>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>신청 내용을 확인해주세요</h3>
+            <ul class="summary">
+              <li>이름: <strong id="confirm-name"></strong></li>
+              <li>참가 요일: <strong id="confirm-day"></strong></li>
+              <li>페이스 그룹: <strong id="confirm-pace"></strong></li>
+            </ul>
+            <p>내용을 고치려면 이전 버튼을 눌러주세요.</p>
+            <div class="step-buttons">
+              <button type="button" class="btn-sub" id="confirm-prev-btn">
+                이전
+              </button>
+              <button type="submit">신청하기</button>
+            </div>
+          </div>
+
+          <div class="step">
+            <h3>신청 완료!</h3>
+            <p id="done-message" class="message success"></p>
+            <p>당일 10분 전까지 한강공원 입구로 와주세요.</p>
+            <div class="step-buttons">
+              <button type="button" id="restart-btn">다시 신청하기</button>
+            </div>
+          </div>
         </form>
-        <p id="message" class="message"></p>
       </section>
     </main>
 
