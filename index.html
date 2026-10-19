@@ -155,6 +155,50 @@
                 중급 그룹 (쉬지 않고 5km)
               </label>
             </div>
+
+            <button type="button" class="btn-link" id="pace-open-btn">
+              어떤 그룹이 맞을지 모르겠다면? 내 페이스 확인하기
+            </button>
+
+            <div class="pace-check" id="pace-check">
+              <p class="field-title">내 페이스 확인하기</p>
+              <p class="pace-help">
+                평소에 달리는 거리와 걸리는 시간을 입력하면 맞는 그룹을
+                추천해드려요.
+              </p>
+              <div class="field">
+                <label for="run-distance">평소 달리는 거리 (km)</label>
+                <input
+                  type="number"
+                  id="run-distance"
+                  name="runDistance"
+                  min="0"
+                  step="0.1"
+                  placeholder="예: 3"
+                />
+              </div>
+              <div class="field">
+                <label for="run-time">그 거리를 달리는 데 걸리는 시간 (분)</label>
+                <input
+                  type="number"
+                  id="run-time"
+                  name="runTime"
+                  min="0"
+                  placeholder="예: 25"
+                />
+              </div>
+              <p id="pace-result" class="message"></p>
+              <div class="step-buttons">
+                <button type="button" class="btn-sub" id="pace-cancel-btn">
+                  취소
+                </button>
+                <button type="button" id="pace-calc-btn">페이스 계산하기</button>
+              </div>
+              <button type="button" class="pace-apply" id="pace-apply-btn">
+                추천 그룹으로 선택하기
+              </button>
+            </div>
+
             <p id="choice-message" class="message"></p>
             <div class="step-buttons">
               <button type="button" class="btn-sub" id="choice-prev-btn">
@@ -170,6 +214,7 @@
               <li>이름: <strong id="confirm-name"></strong></li>
               <li>참가 요일: <strong id="confirm-day"></strong></li>
               <li>페이스 그룹: <strong id="confirm-pace"></strong></li>
+              <li>내 페이스: <strong id="confirm-my-pace"></strong></li>
             </ul>
             <p>내용을 고치려면 이전 버튼을 눌러주세요.</p>
             <div class="step-buttons">

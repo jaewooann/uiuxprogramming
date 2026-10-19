@@ -252,6 +252,67 @@ select {
   padding-left: 20px;
 }
 
+/* Pace check */
+.btn-link {
+  padding: 0;
+  font-size: 15px;
+  color: #4b3f9e;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.btn-link:hover {
+  color: #352b7a;
+  background-color: transparent;
+}
+
+.btn-link.hidden {
+  display: none;
+}
+
+.pace-check {
+  display: none;
+  margin-top: 4px;
+  padding: 16px;
+  background-color: #f7f7fb;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.pace-check.open {
+  display: block;
+}
+
+.pace-check .field-title {
+  margin-top: 0;
+}
+
+.pace-help {
+  margin: 0 0 12px;
+  font-size: 15px;
+  color: #666;
+}
+
+#run-distance,
+#run-time {
+  width: 100%;
+  max-width: 200px;
+}
+
+.pace-apply {
+  display: none;
+  margin-top: 12px;
+  background-color: #1a8f4c;
+}
+
+.pace-apply:hover {
+  background-color: #14703b;
+}
+
+.pace-apply.show {
+  display: inline-block;
+}
+
 .message {
   margin-top: 12px;
   font-size: 15px;
